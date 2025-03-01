@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "./src/index.ts",
   "scripts": {
-    "dev":"nodemon"
-    
+    "dev": "nodemon --ext ts --exec ts-node src/index.ts",
+    "start":"node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.13.5",
+    "@types/node": "^22.13.8",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
