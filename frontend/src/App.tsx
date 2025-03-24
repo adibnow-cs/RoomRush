@@ -1,7 +1,16 @@
-export default function App() {
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./layouts/layout";
+
+const App = () => {
   return (
-    <div className="bg-red-500 text-white text-3xl p-10 rounded-lg">
-      If this is red with white text, Tailwind is working.
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout></Layout>} />
+        <Route path="/search" element={<>Search Page</>} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
   );
-}
+};
+
+export default App;
